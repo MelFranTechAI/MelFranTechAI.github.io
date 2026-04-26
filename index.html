@@ -3,39 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melfra Tech AI — Agencia Digital</title>
+    <title>Melfra Tech AI — Dropshipping Chile</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
         .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
         
-        header { text-align: center; padding: 3rem 0 2rem; }
-        h1 { font-size: 2.8rem; background: linear-gradient(135deg, #009ee3, #6c63ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+        header { text-align: center; padding: 3rem 0 1rem; }
+        h1 { font-size: 2.8rem; background: linear-gradient(135deg, #009ee3, #6c63ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.3rem; }
         .subtitle { color: #888; font-size: 1.1rem; }
-        .badge { display: inline-block; border: 1px solid #333; border-radius: 8px; padding: 0.4rem 1rem; color: #aaa; font-size: 0.85rem; margin-top: 1rem; }
+        .badge { display: inline-block; border: 1px solid #333; border-radius: 8px; padding: 0.4rem 1rem; color: #aaa; font-size: 0.85rem; margin-top: 0.8rem; }
+
+        .hero-box { background: linear-gradient(135deg, #0d1f3d, #0a0a0a); border: 1px solid #1a2a4a; border-radius: 16px; padding: 2rem; text-align: center; margin: 2rem 0; }
+        .hero-box h2 { font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem; }
+        .hero-box p { color: #aaa; }
+        .hero-box .big-number { font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #009ee3, #6c63ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0.5rem 0; }
+        .hero-box .small { color: #666; font-size: 0.85rem; }
 
         section { margin: 2.5rem 0; }
-        h2 { font-size: 1.5rem; color: #fff; margin-bottom: 1rem; border-left: 3px solid #009ee3; padding-left: 0.8rem; }
+        h2.section-title { font-size: 1.4rem; color: #fff; margin-bottom: 1rem; border-left: 3px solid #009ee3; padding-left: 0.8rem; }
 
         .card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
-        .card h3 { color: #009ee3; font-size: 1.15rem; margin-bottom: 0.5rem; }
+        .card h3 { color: #009ee3; font-size: 1.15rem; margin-bottom: 0.3rem; }
         .card p { color: #999; font-size: 0.95rem; }
-        .price { font-size: 1.3rem; color: #fff; font-weight: bold; margin-top: 0.8rem; }
+        .price { font-size: 1.3rem; color: #fff; font-weight: bold; margin: 0.8rem 0; }
 
-        .cta { display: inline-block; background: linear-gradient(135deg, #009ee3, #6c63ff); color: #fff; text-decoration: none; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 600; margin-top: 0.5rem; }
-        .cta:hover { opacity: 0.9; }
+        .btn { display: inline-block; background: linear-gradient(135deg, #009ee3, #6c63ff); color: #fff; text-decoration: none; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 600; }
+        .btn:hover { opacity: 0.9; }
+        .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: #fff; text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+
+        .providers { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
+        .provider-card { background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; padding: 1rem; text-align: center; }
+        .provider-card h4 { color: #fff; font-size: 0.9rem; }
+        .provider-card p { color: #666; font-size: 0.8rem; }
+
+        .step { background: #111; border-left: 3px solid #009ee3; padding: 1rem 1.2rem; margin-bottom: 0.8rem; border-radius: 0 8px 8px 0; }
+        .step h4 { color: #009ee3; font-size: 0.95rem; }
+        .step p { color: #999; font-size: 0.9rem; }
 
         footer { text-align: center; padding: 2rem 0; color: #555; font-size: 0.85rem; border-top: 1px solid #1a1a1a; margin-top: 2rem; }
 
-        .whatsapp-msg { background: #0d1f0d; border: 1px solid #1a3a1a; border-radius: 12px; padding: 1.2rem; margin-top: 1rem; font-size: 0.9rem; color: #ccc; }
-        .whatsapp-msg code { display: block; white-space: pre-wrap; color: #8bc34a; font-family: inherit; font-size: 0.88rem; }
-
-        .whatsapp-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: #fff; text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; margin-top: 1rem; }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .container { padding: 1rem; }
-        }
+        .msg-template { background: #0d1f0d; border: 1px solid #1a3a1a; border-radius: 12px; padding: 1.2rem; margin-top: 1rem; }
+        .msg-template code { display: block; white-space: pre-wrap; color: #8bc34a; font-family: inherit; font-size: 0.88rem; }
     </style>
 </head>
 <body>
@@ -43,62 +55,102 @@
         <header>
             <h1>Melfra Tech AI</h1>
             <p class="subtitle">Lo digital, hecho bien. Al tiro. 🏛️</p>
-            <div class="badge">Agencia Digital Chilena</div>
+            <div class="badge">Dropshipping Chile 🇨🇱</div>
         </header>
 
+        <div class="hero-box">
+            <h2>🔥 Vende sin inventario</h2>
+            <p>Conectamos tu negocio a <strong>Dropi.cl</strong></p>
+            <div class="big-number">+160.000</div>
+            <p class="small">productos de proveedores chilenos verificados</p>
+            <p style="margin-top:1rem; color:#aaa;">Tú vendes. Dropi almacena, empaca y envía.</p>
+        </div>
+
         <section>
-            <h2>Servicios</h2>
-
-            <div class="card">
-                <h3>🚀 Página Web Profesional</h3>
-                <p>Landing page moderna, rápida y lista para tu negocio. Incluye host gratis, dominio temporal y diseño responsive. Ideal para emprendedores que quieren presencia online al tiro.</p>
-                <div class="price">$15.000 CLP</div>
-                <a class="cta" href="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=816937147-362b7523-3f23-41df-af18-e438f9cc6830" target="_blank">Comprar ahora</a>
-            </div>
-
-            <div class="card">
-                <h3>🛍️ Tienda Online con Dropi</h3>
-                <p>Tu tienda conectada a <strong>Dropi.cl</strong> — 160.000+ productos de proveedores chilenos verificados. Sin inventario, sin bodega. Nosotros armamos la tienda, tú vendes por WhatsApp, Instagram o la web.</p>
-                <div class="price">$25.000 CLP</div>
-                <a class="cta" href="https://wa.me/569?text=Quiero%20una%20tienda%20online%20con%20Dropi" target="_blank">Consultar</a>
-            </div>
-
-            <div class="card">
-                <h3>🤖 Chatbot WhatsApp Automatizado</h3>
-                <p>Automatiza respuestas, cotizaciones y pedidos por WhatsApp. Tus clientes te escriben y el bot responde al instante. Ideal para negocios con muchas consultas repetitivas.</p>
-                <div class="price">$20.000 CLP</div>
-                <a class="cta" href="https://wa.me/569?text=Quiero%20un%20chatbot%20para%20WhatsApp" target="_blank">Consultar</a>
+            <h2 class="section-title">Proveedores disponibles</h2>
+            <div class="providers">
+                <div class="provider-card"><h4>Importadora Tendenza</h4><p>2.091 productos</p></div>
+                <div class="provider-card"><h4>Importadora Oferfly</h4><p>674 productos</p></div>
+                <div class="provider-card"><h4>Wowi</h4><p>642 productos</p></div>
+                <div class="provider-card"><h4>Intra Herramientas</h4><p>398 productos</p></div>
+                <div class="provider-card"><h4>Las Dalias Spa</h4><p>281 productos</p></div>
+                <div class="provider-card"><h4>Y muchos más...</h4><p>5.000+ productos</p></div>
             </div>
         </section>
 
         <section>
-            <h2>💬 Mensaje listo para compartir</h2>
-            <div class="whatsapp-msg">
-                <strong>Copia y pega esto en WhatsApp/Instagram:</strong>
+            <h2 class="section-title">Servicios</h2>
+
+            <div class="card">
+                <h3>🚀 Tienda Dropshipping Completa</h3>
+                <p>Te creamos una tienda online conectada a Dropi con cientos de productos listos para vender. Incluye host, diseño y soporte. Tú solo compartes el link y vendes.</p>
+                <div class="price">$25.000 CLP</div>
+                <a class="btn" href="https://wa.me/569?text=Quiero%20mi%20tienda%20dropshipping">Consultar</a>
+            </div>
+
+            <div class="card">
+                <h3>🤖 Gestión Automatizada</h3>
+                <p>Automatizamos la publicación de productos de Dropi a Mercado Libre. Precios, stock y pedidos sincronizados automáticamente.</p>
+                <div class="price">$35.000 CLP</div>
+                <a class="btn" href="https://wa.me/569?text=Quiero%20automatizar%20mi%20tienda">Consultar</a>
+            </div>
+
+            <div class="card">
+                <h3>📦 Página Web Simple</h3>
+                <p>Landing page profesional para tu negocio. Rápida, moderna y lista en 24 hrs.</p>
+                <div class="price">$15.000 CLP</div>
+                <a class="btn" href="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=816937147-362b7523-3f23-41df-af18-e438f9cc6830" target="_blank">Comprar ahora</a>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Plan de acción — Hoy</h2>
+            
+            <div class="step">
+                <h4>1. Completar datos en Dropi</h4>
+                <p>Entrar a dropi.cl → configuración → datos personales. RUT, teléfono, dirección.</p>
+            </div>
+            <div class="step">
+                <h4>2. Elegir 10 productos ganadores</h4>
+                <p>Electrónica, hogar y herramientas. Con buen margen y alta demanda en ML.</p>
+            </div>
+            <div class="step">
+                <h4>3. Publicar en Mercado Libre</h4>
+                <p>Subir productos con fotos, descripción y precio competitivo.</p>
+            </div>
+            <div class="step">
+                <h4>4. Compartir en WhatsApp</h4>
+                <p>Enviar el mensaje de abajo a contactos. Primera venta = $15.000+</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">💬 Mensaje listo para copiar</h2>
+            <div class="msg-template">
                 <code>¡Hola! 👋
 
 Soy de Melfra Tech AI, agencia digital chilena.
 
-Te ofrezco:
+🔥 ¿Quieres vender online sin invertir en inventario?
 
-🚀 Página web profesional → $15.000
-🛍️ Tienda online con Dropi → $25.000
-🤖 Chatbot WhatsApp → $20.000
+Tenemos:
+• Acceso a Dropi.cl (+160.000 productos chilenos)
+• Tienda dropshipping completa → $25.000
+• Automatización ML → $35.000
+• Página web simple → $15.000
 
-Todo incluye diseño, host y soporte.
-
-¿Te interesa? Escríbeme y te cuento sin compromiso.
+Todo listo para empezar. ¿Te interesa?
 
 👉 https://melfrantechai.github.io</code>
             </div>
-            <a class="whatsapp-btn" href="https://wa.me/569?text=Hola%20Melfra%20Tech%20AI%20👋%20Quiero%20consultar%20por%20sus%20servicios" target="_blank">
+            <a class="btn-whatsapp" href="https://wa.me/569?text=Hola%20Melfra%20Tech%20AI%20👋%20Consulto%20por%20sus%20servicios" target="_blank">
                 💬 Abrir WhatsApp
             </a>
         </section>
 
         <footer>
             <p>Melfra Tech AI — Chile 🏛️</p>
-            <p>Pago vía Mercado Pago | Transferencia | Efectivo</p>
+            <p>Dropi | Mercado Libre | Mercado Pago</p>
         </footer>
     </div>
 </body>
