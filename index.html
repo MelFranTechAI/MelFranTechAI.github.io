@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melfra Tech AI — Dropshipping Chile</title>
+    <title>Melfra Tech AI — Agencia Digital Chile 🇨🇱</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
         
         header { text-align: center; padding: 3rem 0 1rem; }
         h1 { font-size: 2.8rem; background: linear-gradient(135deg, #009ee3, #6c63ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.3rem; }
@@ -18,7 +18,6 @@
         .hero-box h2 { font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem; }
         .hero-box p { color: #aaa; }
         .hero-box .big-number { font-size: 3rem; font-weight: bold; background: linear-gradient(135deg, #009ee3, #6c63ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0.5rem 0; }
-        .hero-box .small { color: #666; font-size: 0.85rem; }
 
         section { margin: 2.5rem 0; }
         h2.section-title { font-size: 1.4rem; color: #fff; margin-bottom: 1rem; border-left: 3px solid #009ee3; padding-left: 0.8rem; }
@@ -31,23 +30,31 @@
         .btn { display: inline-block; background: linear-gradient(135deg, #009ee3, #6c63ff); color: #fff; text-decoration: none; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 600; }
         .btn:hover { opacity: 0.9; }
         .btn-whatsapp { display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: #fff; text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; }
+        .btn-ml { display: inline-block; background: #FFE600; color: #333; text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 700; }
 
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+        @media (max-width: 600px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
 
-        .providers { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 1rem 0; }
-        .provider-card { background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; padding: 1rem; text-align: center; }
-        .provider-card h4 { color: #fff; font-size: 0.9rem; }
-        .provider-card p { color: #666; font-size: 0.8rem; }
+        .analisis-card { background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; padding: 1rem; margin-bottom: 0.8rem; }
+        .analisis-card h4 { color: #009ee3; font-size: 0.95rem; }
+        .analisis-card p { color: #999; font-size: 0.9rem; }
+        .tag { display: inline-block; background: #1a2a1a; color: #8bc34a; border-radius: 4px; padding: 0.15rem 0.5rem; font-size: 0.75rem; }
 
         .step { background: #111; border-left: 3px solid #009ee3; padding: 1rem 1.2rem; margin-bottom: 0.8rem; border-radius: 0 8px 8px 0; }
         .step h4 { color: #009ee3; font-size: 0.95rem; }
         .step p { color: #999; font-size: 0.9rem; }
 
-        footer { text-align: center; padding: 2rem 0; color: #555; font-size: 0.85rem; border-top: 1px solid #1a1a1a; margin-top: 2rem; }
-
         .msg-template { background: #0d1f0d; border: 1px solid #1a3a1a; border-radius: 12px; padding: 1.2rem; margin-top: 1rem; }
         .msg-template code { display: block; white-space: pre-wrap; color: #8bc34a; font-family: inherit; font-size: 0.88rem; }
+
+        footer { text-align: center; padding: 2rem 0; color: #555; font-size: 0.85rem; border-top: 1px solid #1a1a1a; margin-top: 2rem; }
+        .social-links { margin: 1rem 0; }
+        .social-links a { color: #009ee3; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem; }
+        .social-links a:hover { text-decoration: underline; }
+
+        .buy-btn { display: inline-block; background: #009ee3; color: #fff; text-decoration: none; padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: 600; margin-top: 0.5rem; }
+        .buy-btn:hover { background: #007bb5; }
     </style>
 </head>
 <body>
@@ -55,102 +62,140 @@
         <header>
             <h1>Melfra Tech AI</h1>
             <p class="subtitle">Lo digital, hecho bien. Al tiro. 🏛️</p>
-            <div class="badge">Dropshipping Chile 🇨🇱</div>
+            <div class="badge">🇨🇱 Chile — Dropshipping · Tiendas · Automatización</div>
         </header>
 
         <div class="hero-box">
-            <h2>🔥 Vende sin inventario</h2>
-            <p>Conectamos tu negocio a <strong>Dropi.cl</strong></p>
+            <h2>🔥 Conectamos tu negocio a Mercado Libre + Dropi</h2>
+            <p>Vende en el marketplace más grande de Chile sin invertir en inventario</p>
             <div class="big-number">+160.000</div>
             <p class="small">productos de proveedores chilenos verificados</p>
-            <p style="margin-top:1rem; color:#aaa;">Tú vendes. Dropi almacena, empaca y envía.</p>
+            <p style="margin-top:1rem;"><strong>Tú vendes. Dropi almacena y envía. Nosotros conectamos todo.</strong></p>
+            <div style="margin-top:1rem;">
+                <a class="btn-whatsapp" href="https://wa.me/569?text=Quiero%20vender%20en%20Mercado%20Libre%20sin%20inventario%20👋" target="_blank">💬 Empezar ahora</a>
+            </div>
         </div>
 
+        <!-- ANÁLISIS DE MERCADO -->
         <section>
-            <h2 class="section-title">Proveedores disponibles</h2>
-            <div class="providers">
-                <div class="provider-card"><h4>Importadora Tendenza</h4><p>2.091 productos</p></div>
-                <div class="provider-card"><h4>Importadora Oferfly</h4><p>674 productos</p></div>
-                <div class="provider-card"><h4>Wowi</h4><p>642 productos</p></div>
-                <div class="provider-card"><h4>Intra Herramientas</h4><p>398 productos</p></div>
-                <div class="provider-card"><h4>Las Dalias Spa</h4><p>281 productos</p></div>
-                <div class="provider-card"><h4>Y muchos más...</h4><p>5.000+ productos</p></div>
+            <h2 class="section-title">📊 Análisis de Mercado — Abril 2026</h2>
+            
+            <div class="analisis-card">
+                <h4>🔥 Top categorías más vendidas en Mercado Libre Chile</h4>
+                <p>
+                    <span class="tag">#1 Tecnología</span> Proyectores, audífonos, parlantes Bluetooth → Margen 25-40%<br>
+                    <span class="tag">#2 Hogar</span> Organización, cocina, limpieza → Margen 30-50%<br>
+                    <span class="tag">#3 Herramientas</span> Kits multiuso, eléctricas → Margen 35-55%<br>
+                    <span class="tag">#4 Belleza</span> Cuidado personal, blanqueamiento → Margen 40-60%<br>
+                    <span class="tag">#5 Moda</span> Zapatos, accesorios → Margen 30-45%
+                </p>
+            </div>
+
+            <div class="analisis-card">
+                <h4>🎯 Estrategia recomendada — Productos ganadores</h4>
+                <p>Apuntamos a <strong>3 categorías desde Dropi</strong> que tienen alta rotación en ML:</p>
+                <p style="margin-top:0.5rem;">
+                ✅ <strong>Hogar & Cocina</strong> — Utensilios, organizadores, dispensadores (Tendenza, Wowi +2.700 prod)<br>
+                ✅ <strong>Herramientas</strong> — Kits, accesorios (Intra Herramientas 398 prod)<br>
+                ✅ <strong>Electrónica</strong> — Parlantes, cargadores, accesorios (Tendenza +900 prod)
+                </p>
+            </div>
+
+            <div class="analisis-card">
+                <h4>💰 Proyección de ingresos</h4>
+                <p>Con <strong>10 productos publicados</strong> en ML (precio promedio $10.000-$25.000):</p>
+                <p style="margin-top:0.4rem;">
+                • Margen promedio por producto: <strong>$3.000 - $8.000</strong><br>
+                • Si vendes 1 producto/día: <strong>$90.000 - $240.000/mes</strong><br>
+                • Dropi procesa y envía — cero logística para ti
+                </p>
             </div>
         </section>
 
+        <!-- SERVICIOS -->
         <section>
             <h2 class="section-title">Servicios</h2>
 
-            <div class="card">
-                <h3>🚀 Tienda Dropshipping Completa</h3>
-                <p>Te creamos una tienda online conectada a Dropi con cientos de productos listos para vender. Incluye host, diseño y soporte. Tú solo compartes el link y vendes.</p>
-                <div class="price">$25.000 CLP</div>
-                <a class="btn" href="https://wa.me/569?text=Quiero%20mi%20tienda%20dropshipping">Consultar</a>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🚀 Tienda Dropshipping Completa</h3>
+                    <p>Tienda online conectada a Dropi con cientos de productos. Host, diseño y soporte incluidos.</p>
+                    <div class="price">$25.000 CLP</div>
+                    <a class="btn" href="https://wa.me/569?text=Quiero%20mi%20tienda%20dropshipping">Consultar</a>
+                </div>
+
+                <div class="card">
+                    <h3>🤖 Automatización Mercado Libre</h3>
+                    <p>Sincronizamos productos de Dropi a ML. Precios, stock y pedidos automatizados.</p>
+                    <div class="price">$35.000 CLP</div>
+                    <a class="btn" href="https://wa.me/569?text=Quiero%20automatizar%20mi%20tienda">Consultar</a>
+                </div>
             </div>
 
             <div class="card">
-                <h3>🤖 Gestión Automatizada</h3>
-                <p>Automatizamos la publicación de productos de Dropi a Mercado Libre. Precios, stock y pedidos sincronizados automáticamente.</p>
-                <div class="price">$35.000 CLP</div>
-                <a class="btn" href="https://wa.me/569?text=Quiero%20automatizar%20mi%20tienda">Consultar</a>
-            </div>
-
-            <div class="card">
-                <h3>📦 Página Web Simple</h3>
-                <p>Landing page profesional para tu negocio. Rápida, moderna y lista en 24 hrs.</p>
+                <h3>📦 Página Web Profesional</h3>
+                <p>Landing page moderna para tu negocio. Lista en 24 hrs.</p>
                 <div class="price">$15.000 CLP</div>
-                <a class="btn" href="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=816937147-362b7523-3f23-41df-af18-e438f9cc6830" target="_blank">Comprar ahora</a>
+                <a class="buy-btn" href="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=816937147-53db93d9-f360-4d75-b84b-395b63045140">
+                🛒 Comprar ahora — $15.000</a>
+                <span style="display:inline-block;margin-left:0.5rem;color:#666;font-size:0.85rem;">Paga con débito/crédito vía Mercado Pago</span>
             </div>
         </section>
 
+        <!-- PLAN DE ACCIÓN -->
         <section>
-            <h2 class="section-title">Plan de acción — Hoy</h2>
+            <h2 class="section-title">🎯 Plan de acción — Hoy</h2>
             
             <div class="step">
-                <h4>1. Completar datos en Dropi</h4>
-                <p>Entrar a dropi.cl → configuración → datos personales. RUT, teléfono, dirección.</p>
+                <h4>Paso 1: Elegir productos del catálogo</h4>
+                <p>Seleccionamos 10 productos de alto margen desde Dropi (hogar, herramientas, electrónica).</p>
             </div>
             <div class="step">
-                <h4>2. Elegir 10 productos ganadores</h4>
-                <p>Electrónica, hogar y herramientas. Con buen margen y alta demanda en ML.</p>
+                <h4>Paso 2: Publicar en Mercado Libre</h4>
+                <p>Subimos a tu cuenta de ML con fotos, descripción y precio competitivo. Sin costo de publicación.</p>
             </div>
             <div class="step">
-                <h4>3. Publicar en Mercado Libre</h4>
-                <p>Subir productos con fotos, descripción y precio competitivo.</p>
+                <h4>Paso 3: Recibir pedidos</h4>
+                <p>Cuando alguien compre en ML, el pedido llega a Dropi. Ellos empacan y envían. Tú recibes la ganancia.</p>
             </div>
             <div class="step">
-                <h4>4. Compartir en WhatsApp</h4>
-                <p>Enviar el mensaje de abajo a contactos. Primera venta = $15.000+</p>
+                <h4>Paso 4: Escalar</h4>
+                <p>Más productos, más categorías, más ventas. Sin invertir un peso en inventario.</p>
             </div>
         </section>
 
+        <!-- MENSAJE WHATSAPP -->
         <section>
-            <h2 class="section-title">💬 Mensaje listo para copiar</h2>
+            <h2 class="section-title">💬 Mensaje listo para compartir</h2>
             <div class="msg-template">
-                <code>¡Hola! 👋
+                <code>🔥 ¿Quieres vender en Mercado Libre sin invertir en inventario?
 
-Soy de Melfra Tech AI, agencia digital chilena.
+Soy de Melfra Tech AI y conectamos tu negocio con Dropi.cl:
+• +160.000 productos chilenos disponibles
+• Sin almacenar, sin empacar, sin enviar
+• Nosotros creamos tu tienda y la conectamos a ML
 
-🔥 ¿Quieres vender online sin invertir en inventario?
+Planes:
+🛍️ Tienda dropshipping completa → $25.000
+🤖 Automatización ML → $35.000
+📦 Página web simple → $15.000
 
-Tenemos:
-• Acceso a Dropi.cl (+160.000 productos chilenos)
-• Tienda dropshipping completa → $25.000
-• Automatización ML → $35.000
-• Página web simple → $15.000
-
-Todo listo para empezar. ¿Te interesa?
-
-👉 https://melfrantechai.github.io</code>
+¿Partimos? 👉 https://melfrantechai.github.io</code>
             </div>
-            <a class="btn-whatsapp" href="https://wa.me/569?text=Hola%20Melfra%20Tech%20AI%20👋%20Consulto%20por%20sus%20servicios" target="_blank">
-                💬 Abrir WhatsApp
-            </a>
+            <div style="margin-top:1rem;">
+                <a class="btn-whatsapp" href="https://wa.me/569?text=Hola%20Melfra%20Tech%20AI%20👋%20Quiero%20información" target="_blank">💬 Enviar por WhatsApp</a>
+            </div>
         </section>
 
         <footer>
-            <p>Melfra Tech AI — Chile 🏛️</p>
-            <p>Dropi | Mercado Libre | Mercado Pago</p>
+            <p>🏛️ Melfra Tech AI — Chile</p>
+            <div class="social-links">
+                <a href="https://melfrantechai.github.io" target="_blank">🌐 Web</a>
+                <a href="https://wa.me/569?text=Quiero%20vender%20en%20ML" target="_blank">💬 WhatsApp</a>
+                <a href="https://www.mercadopago.cl" target="_blank">🟡 Mercado Pago</a>
+                <a href="https://dropi.cl" target="_blank">📦 Dropi</a>
+            </div>
+            <p style="margin-top:0.5rem;font-size:0.8rem;">Dropi · Mercado Libre · Mercado Pago · GitHub Pages</p>
         </footer>
     </div>
 </body>
