@@ -7,12 +7,16 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .container { max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
         
         header { text-align: center; padding: 3rem 0 1rem; }
         h1 { font-size: 2.8rem; background: linear-gradient(135deg, #009ee3, #6c63ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.3rem; }
         .subtitle { color: #888; font-size: 1.1rem; }
         .badge { display: inline-block; border: 1px solid #333; border-radius: 8px; padding: 0.4rem 1rem; color: #aaa; font-size: 0.85rem; margin-top: 0.8rem; }
+
+        .tabs { display: flex; gap: 0.5rem; margin: 2rem 0 0; justify-content: center; flex-wrap: wrap; }
+        .tab-btn { background: #111; border: 1px solid #333; color: #aaa; padding: 0.7rem 1.5rem; border-radius: 8px; cursor: pointer; font-size: 0.95rem; }
+        .tab-btn.active { background: #0d1f3d; border-color: #009ee3; color: #009ee3; font-weight: 600; }
 
         .hero-box { background: linear-gradient(135deg, #0d1f3d, #0a0a0a); border: 1px solid #1a2a4a; border-radius: 16px; padding: 2rem; text-align: center; margin: 2rem 0; }
         .hero-box h2 { font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem; }
@@ -36,6 +40,14 @@
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
         @media (max-width: 600px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
 
+        .prod-card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 1.2rem; margin-bottom: 1rem; display: flex; flex-direction: column; }
+        .prod-card h4 { color: #009ee3; font-size: 1.05rem; margin-bottom: 0.3rem; }
+        .prod-card .desc { color: #999; font-size: 0.85rem; flex: 1; }
+        .prod-card .price-tag { font-size: 1.4rem; color: #fff; font-weight: bold; margin: 0.5rem 0; }
+        .prod-card .buy-link { display: inline-block; background: #009ee3; color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.9rem; text-align: center; }
+        .prod-card .buy-link:hover { background: #007bb5; }
+        .prod-card .tag-stock { display: inline-block; background: #1a2a1a; color: #8bc34a; border-radius: 4px; padding: 0.15rem 0.5rem; font-size: 0.75rem; }
+
         .analisis-card { background: #0d0d0d; border: 1px solid #1a1a1a; border-radius: 8px; padding: 1rem; margin-bottom: 0.8rem; }
         .analisis-card h4 { color: #009ee3; font-size: 0.95rem; }
         .analisis-card p { color: #999; font-size: 0.9rem; }
@@ -53,8 +65,9 @@
         .social-links a { color: #009ee3; text-decoration: none; margin: 0 0.5rem; font-size: 0.9rem; }
         .social-links a:hover { text-decoration: underline; }
 
-        .buy-btn { display: inline-block; background: #009ee3; color: #fff; text-decoration: none; padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: 600; margin-top: 0.5rem; }
-        .buy-btn:hover { background: #007bb5; }
+        .hidden { display: none; }
+        
+        .envio-badge { background: #0d1f0d; border: 1px solid #1a3a1a; border-radius: 8px; padding: 0.8rem; text-align: center; font-size: 0.85rem; color: #8bc34a; margin-bottom: 1rem; }
     </style>
 </head>
 <body>
@@ -65,6 +78,7 @@
             <div class="badge">🇨🇱 Chile — Dropshipping · Tiendas · Automatización</div>
         </header>
 
+        <!-- HERO -->
         <div class="hero-box">
             <h2>🔥 Conectamos tu negocio a Mercado Libre + Dropi</h2>
             <p>Vende en el marketplace más grande de Chile sin invertir en inventario</p>
@@ -72,79 +86,95 @@
             <p class="small">productos de proveedores chilenos verificados</p>
             <p style="margin-top:1rem;"><strong>Tú vendes. Dropi almacena y envía. Nosotros conectamos todo.</strong></p>
             <div style="margin-top:1rem;">
-                <a class="btn-whatsapp" href="https://wa.me/569?text=Quiero%20vender%20en%20Mercado%20Libre%20sin%20inventario%20👋" target="_blank">💬 Empezar ahora</a>
+                <a class="btn-whatsapp" href="https://wa.me/569?text=Quiero%20vender%20en%20Mercado%20Libre%20sin%20inventario" target="_blank">💬 Empezar ahora</a>
             </div>
         </div>
 
-        <!-- ANÁLISIS DE MERCADO -->
-        <section>
-            <h2 class="section-title">📊 Análisis de Mercado — Abril 2026</h2>
-            
-            <div class="analisis-card">
-                <h4>🔥 Top categorías más vendidas en Mercado Libre Chile</h4>
-                <p>
-                    <span class="tag">#1 Tecnología</span> Proyectores, audífonos, parlantes Bluetooth → Margen 25-40%<br>
-                    <span class="tag">#2 Hogar</span> Organización, cocina, limpieza → Margen 30-50%<br>
-                    <span class="tag">#3 Herramientas</span> Kits multiuso, eléctricas → Margen 35-55%<br>
-                    <span class="tag">#4 Belleza</span> Cuidado personal, blanqueamiento → Margen 40-60%<br>
-                    <span class="tag">#5 Moda</span> Zapatos, accesorios → Margen 30-45%
-                </p>
-            </div>
+        <!-- TABS: Servicios | Productos -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('servicios')">💼 Servicios</button>
+            <button class="tab-btn" onclick="showTab('productos')">📦 Tienda Dropi</button>
+            <button class="tab-btn" onclick="showTab('analisis')">📊 Análisis</button>
+        </div>
 
-            <div class="analisis-card">
-                <h4>🎯 Estrategia recomendada — Productos ganadores</h4>
-                <p>Apuntamos a <strong>3 categorías desde Dropi</strong> que tienen alta rotación en ML:</p>
-                <p style="margin-top:0.5rem;">
-                ✅ <strong>Hogar & Cocina</strong> — Utensilios, organizadores, dispensadores (Tendenza, Wowi +2.700 prod)<br>
-                ✅ <strong>Herramientas</strong> — Kits, accesorios (Intra Herramientas 398 prod)<br>
-                ✅ <strong>Electrónica</strong> — Parlantes, cargadores, accesorios (Tendenza +900 prod)
-                </p>
-            </div>
+        <!-- TAB SERVICIOS -->
+        <div id="tab-servicios">
+            <section>
+                <h2 class="section-title">💼 Servicios Profesionales</h2>
 
-            <div class="analisis-card">
-                <h4>💰 Proyección de ingresos</h4>
-                <p>Con <strong>10 productos publicados</strong> en ML (precio promedio $10.000-$25.000):</p>
-                <p style="margin-top:0.4rem;">
-                • Margen promedio por producto: <strong>$3.000 - $8.000</strong><br>
-                • Si vendes 1 producto/día: <strong>$90.000 - $240.000/mes</strong><br>
-                • Dropi procesa y envía — cero logística para ti
-                </p>
-            </div>
-        </section>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>🚀 Tienda Dropshipping Completa</h3>
+                        <p>Tienda online conectada a Dropi con cientos de productos. Host, diseño y soporte incluidos.</p>
+                        <div class="price">$25.000 CLP</div>
+                        <a class="btn" href="https://wa.me/569?text=Quiero%20mi%20tienda%20dropshipping">Consultar</a>
+                    </div>
 
-        <!-- SERVICIOS -->
-        <section>
-            <h2 class="section-title">Servicios</h2>
-
-            <div class="grid-2">
-                <div class="card">
-                    <h3>🚀 Tienda Dropshipping Completa</h3>
-                    <p>Tienda online conectada a Dropi con cientos de productos. Host, diseño y soporte incluidos.</p>
-                    <div class="price">$25.000 CLP</div>
-                    <a class="btn" href="https://wa.me/569?text=Quiero%20mi%20tienda%20dropshipping">Consultar</a>
+                    <div class="card">
+                        <h3>🤖 Automatización Mercado Libre</h3>
+                        <p>Sincronizamos productos de Dropi a ML. Precios, stock y pedidos automatizados.</p>
+                        <div class="price">$35.000 CLP</div>
+                        <a class="btn" href="https://wa.me/569?text=Quiero%20automatizar%20mi%20tienda">Consultar</a>
+                    </div>
                 </div>
 
                 <div class="card">
-                    <h3>🤖 Automatización Mercado Libre</h3>
-                    <p>Sincronizamos productos de Dropi a ML. Precios, stock y pedidos automatizados.</p>
-                    <div class="price">$35.000 CLP</div>
-                    <a class="btn" href="https://wa.me/569?text=Quiero%20automatizar%20mi%20tienda">Consultar</a>
+                    <h3>📦 Página Web Profesional</h3>
+                    <p>Landing page moderna para tu negocio. Lista en 24 hrs.</p>
+                    <div class="price">$15.000 CLP</div>
+                    <a class="btn" href="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=816937147-53db93d9-f360-4d75-b84b-395b63045140">
+                    🛒 Comprar ahora</a>
+                    <span style="display:inline-block;margin-left:0.5rem;color:#666;font-size:0.85rem;">Paga con débito/crédito vía Mercado Pago</span>
                 </div>
-            </div>
+            </section>
+        </div>
 
-            <div class="card">
-                <h3>📦 Página Web Profesional</h3>
-                <p>Landing page moderna para tu negocio. Lista en 24 hrs.</p>
-                <div class="price">$15.000 CLP</div>
-                <a class="buy-btn" href="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=816937147-53db93d9-f360-4d75-b84b-395b63045140">
-                🛒 Comprar ahora — $15.000</a>
-                <span style="display:inline-block;margin-left:0.5rem;color:#666;font-size:0.85rem;">Paga con débito/crédito vía Mercado Pago</span>
-            </div>
-        </section>
+        <!-- TAB PRODUCTOS DROPI -->
+        <div id="tab-productos" class="hidden">
+            <section>
+                <h2 class="section-title">📦 Tienda — Productos Dropi</h2>
+                
+                <div class="envio-badge">
+                    🚚 Envío rápido desde Santiago (24-72 hrs) · Paga con débito/crédito · Garantía Mercado Pago
+                </div>
+
+                <div class="grid-2" id="productos-grid">
+                    <div class="prod-card">
+                        <h4>Kit Escariador Asiento Inyectores Diesel</h4>
+                        <p class="desc">Juego de 6 escariadores para asientos de inyectores. Acero al carbono. Uso diesel.</p>
+                        <div class="price-tag">$29.990</div>
+                        <div><span class="tag-stock">✅ Stock: 100</span></div>
+                        <div style="margin-top:0.5rem;"><a class="buy-link" href="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=816937147-af25d35f-a8d7-4006-afa6-bd3bf38821be">🛒 Comprar ahora</a></div>
+                    </div>
+                </div>
+
+                <div style="text-align:center;margin-top:1rem;color:#666;font-size:0.9rem;">
+                    🚧 Más productos agregándose pronto · Síguenos para novedades
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB ANÁLISIS -->
+        <div id="tab-analisis" class="hidden">
+            <section>
+                <h2 class="section-title">📊 Análisis de Mercado — Abril 2026</h2>
+                
+                <div class="analisis-card">
+                    <h4>🔥 Top categorías ML Chile</h4>
+                    <p>
+                        <span class="tag">#1 Tecnología</span> Proyectores, audífonos, parlantes → Margen 25-40%<br>
+                        <span class="tag">#2 Hogar</span> Organización, cocina, limpieza → Margen 30-50%<br>
+                        <span class="tag">#3 Herramientas</span> Kits multiuso, eléctricas → Margen 35-55%<br>
+                        <span class="tag">#4 Belleza</span> Cuidado personal → Margen 40-60%<br>
+                        <span class="tag">#5 Moda</span> Zapatos, accesorios → Margen 30-45%
+                    </p>
+                </div>
+            </section>
+        </div>
 
         <!-- PLAN DE ACCIÓN -->
         <section>
-            <h2 class="section-title">🎯 Plan de acción — Hoy</h2>
+            <h2 class="section-title">🎯 Plan de acción</h2>
             
             <div class="step">
                 <h4>Paso 1: Elegir productos del catálogo</h4>
@@ -152,11 +182,11 @@
             </div>
             <div class="step">
                 <h4>Paso 2: Publicar en Mercado Libre</h4>
-                <p>Subimos a tu cuenta de ML con fotos, descripción y precio competitivo. Sin costo de publicación.</p>
+                <p>Subimos a tu cuenta de ML con fotos, descripción y precio competitivo.</p>
             </div>
             <div class="step">
                 <h4>Paso 3: Recibir pedidos</h4>
-                <p>Cuando alguien compre en ML, el pedido llega a Dropi. Ellos empacan y envían. Tú recibes la ganancia.</p>
+                <p>Cuando alguien compre en ML, Dropi procesa, empaca y envía. Tú recibes la ganancia.</p>
             </div>
             <div class="step">
                 <h4>Paso 4: Escalar</h4>
@@ -164,7 +194,7 @@
             </div>
         </section>
 
-        <!-- MENSAJE WHATSAPP -->
+        <!-- WHATSAPP -->
         <section>
             <h2 class="section-title">💬 Mensaje listo para compartir</h2>
             <div class="msg-template">
@@ -195,8 +225,18 @@ Planes:
                 <a href="https://www.mercadopago.cl" target="_blank">🟡 Mercado Pago</a>
                 <a href="https://dropi.cl" target="_blank">📦 Dropi</a>
             </div>
-            <p style="margin-top:0.5rem;font-size:0.8rem;">Dropi · Mercado Libre · Mercado Pago · GitHub Pages</p>
         </footer>
     </div>
+
+    <script>
+        function showTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('tab-servicios').classList.add('hidden');
+            document.getElementById('tab-productos').classList.add('hidden');
+            document.getElementById('tab-analisis').classList.add('hidden');
+            document.getElementById('tab-' + tab).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
