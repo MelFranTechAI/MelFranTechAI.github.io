@@ -3,21 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melfra Tech AI</title>
+    <title>Melfra Tech AI — Agencia Digital</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #fff; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
-        .container { text-align: center; padding: 2rem; max-width: 600px; }
-        h1 { font-size: 3rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, #009ee3, #6c63ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        p { color: #888; font-size: 1.1rem; margin-bottom: 2rem; }
-        .badge { display: inline-block; border: 1px solid #333; border-radius: 8px; padding: 0.5rem 1rem; color: #aaa; font-size: 0.9rem; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+        
+        header { text-align: center; padding: 3rem 0 2rem; }
+        h1 { font-size: 2.8rem; background: linear-gradient(135deg, #009ee3, #6c63ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+        .subtitle { color: #888; font-size: 1.1rem; }
+        .badge { display: inline-block; border: 1px solid #333; border-radius: 8px; padding: 0.4rem 1rem; color: #aaa; font-size: 0.85rem; margin-top: 1rem; }
+
+        section { margin: 2.5rem 0; }
+        h2 { font-size: 1.5rem; color: #fff; margin-bottom: 1rem; border-left: 3px solid #009ee3; padding-left: 0.8rem; }
+
+        .card { background: #111; border: 1px solid #222; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+        .card h3 { color: #009ee3; font-size: 1.15rem; margin-bottom: 0.5rem; }
+        .card p { color: #999; font-size: 0.95rem; }
+        .price { font-size: 1.3rem; color: #fff; font-weight: bold; margin-top: 0.8rem; }
+
+        .cta { display: inline-block; background: linear-gradient(135deg, #009ee3, #6c63ff); color: #fff; text-decoration: none; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 600; margin-top: 0.5rem; }
+        .cta:hover { opacity: 0.9; }
+
+        footer { text-align: center; padding: 2rem 0; color: #555; font-size: 0.85rem; border-top: 1px solid #1a1a1a; margin-top: 2rem; }
+
+        .whatsapp-msg { background: #0d1f0d; border: 1px solid #1a3a1a; border-radius: 12px; padding: 1.2rem; margin-top: 1rem; font-size: 0.9rem; color: #ccc; }
+        .whatsapp-msg code { display: block; white-space: pre-wrap; color: #8bc34a; font-family: inherit; font-size: 0.88rem; }
+
+        .whatsapp-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: #fff; text-decoration: none; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; margin-top: 1rem; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Melfra Tech AI</h1>
-        <p>Lo digital, hecho bien. Al tiro. 🏛️</p>
-        <div class="badge">Agencia Digital Chilena</div>
+        <header>
+            <h1>Melfra Tech AI</h1>
+            <p class="subtitle">Lo digital, hecho bien. Al tiro. 🏛️</p>
+            <div class="badge">Agencia Digital Chilena</div>
+        </header>
+
+        <section>
+            <h2>Servicios</h2>
+
+            <div class="card">
+                <h3>🚀 Página Web Profesional</h3>
+                <p>Landing page moderna, rápida y lista para tu negocio. Incluye host gratis, dominio temporal y diseño responsive. Ideal para emprendedores que quieren presencia online al tiro.</p>
+                <div class="price">$15.000 CLP</div>
+                <a class="cta" href="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=816937147-362b7523-3f23-41df-af18-e438f9cc6830" target="_blank">Comprar ahora</a>
+            </div>
+
+            <div class="card">
+                <h3>🛍️ Tienda Online con Dropi</h3>
+                <p>Tu tienda conectada a <strong>Dropi.cl</strong> — 160.000+ productos de proveedores chilenos verificados. Sin inventario, sin bodega. Nosotros armamos la tienda, tú vendes por WhatsApp, Instagram o la web.</p>
+                <div class="price">$25.000 CLP</div>
+                <a class="cta" href="https://wa.me/569?text=Quiero%20una%20tienda%20online%20con%20Dropi" target="_blank">Consultar</a>
+            </div>
+
+            <div class="card">
+                <h3>🤖 Chatbot WhatsApp Automatizado</h3>
+                <p>Automatiza respuestas, cotizaciones y pedidos por WhatsApp. Tus clientes te escriben y el bot responde al instante. Ideal para negocios con muchas consultas repetitivas.</p>
+                <div class="price">$20.000 CLP</div>
+                <a class="cta" href="https://wa.me/569?text=Quiero%20un%20chatbot%20para%20WhatsApp" target="_blank">Consultar</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>💬 Mensaje listo para compartir</h2>
+            <div class="whatsapp-msg">
+                <strong>Copia y pega esto en WhatsApp/Instagram:</strong>
+                <code>¡Hola! 👋
+
+Soy de Melfra Tech AI, agencia digital chilena.
+
+Te ofrezco:
+
+🚀 Página web profesional → $15.000
+🛍️ Tienda online con Dropi → $25.000
+🤖 Chatbot WhatsApp → $20.000
+
+Todo incluye diseño, host y soporte.
+
+¿Te interesa? Escríbeme y te cuento sin compromiso.
+
+👉 https://melfrantechai.github.io</code>
+            </div>
+            <a class="whatsapp-btn" href="https://wa.me/569?text=Hola%20Melfra%20Tech%20AI%20👋%20Quiero%20consultar%20por%20sus%20servicios" target="_blank">
+                💬 Abrir WhatsApp
+            </a>
+        </section>
+
+        <footer>
+            <p>Melfra Tech AI — Chile 🏛️</p>
+            <p>Pago vía Mercado Pago | Transferencia | Efectivo</p>
+        </footer>
     </div>
 </body>
 </html>
